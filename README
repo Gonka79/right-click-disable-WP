@@ -1,0 +1,29 @@
+Step 1: Access Your WordPress Theme
+Log in to your WordPress admin panel.
+Go to Appearance > Theme Editor.
+
+Step 2: Edit the Header File
+In the theme files list, find and select the header.php file.
+Add the following JavaScript code just before the </head> tag:
+html
+Copiar código
+<script type="text/javascript">
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+</script>
+
+
+Step 3: Save the Changes
+Click the "Update File" button to save the changes.
+Code Explained
+The JavaScript code adds an event listener to the document that listens for the contextmenu event (which triggers on right-click) and calls e.preventDefault(), which prevents the browser's default action (showing the context menu).
+
+Considerations
+Theme Compatibility: Ensure your theme doesn't update automatically, as an update might overwrite your changes.
+Child Theme Files: If you're using a child theme, make these changes in the child theme's header.php file instead of the main theme.
+
+
+
+
+
