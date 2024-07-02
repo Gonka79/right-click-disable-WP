@@ -1,0 +1,25 @@
+Paso 1: Accede a tu Tema de WordPress
+Inicia sesión en tu panel de administración de WordPress.
+Ve a Apariencia > Editor de Temas.
+
+Paso 2: Edita el Archivo Header
+En la lista de archivos del tema, busca y selecciona el archivo header.php.
+Añade el siguiente código JavaScript justo antes de la etiqueta </head>:
+
+
+
+<script type="text/javascript">
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+</script>
+
+
+Paso 3: Guarda los Cambios
+Haz clic en el botón "Actualizar archivo" para guardar los cambios.
+Código Explicado
+El código JavaScript añade un event listener al documento que escucha el evento contextmenu (que se activa al hacer clic derecho) y llama a e.preventDefault(), que previene la acción predeterminada del navegador (mostrar el menú contextual).
+
+Consideraciones
+Compatibilidad del Tema: Asegúrate de que tu tema no se actualice automáticamente, ya que una actualización podría sobrescribir tus cambios.
+Archivos del Tema Hijo: Si estás utilizando un tema hijo, realiza estos cambios en el archivo header.php del tema hijo en lugar del tema principal.
